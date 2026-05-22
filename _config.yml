@@ -41,7 +41,7 @@ social:
   name: Vikas Singh
   email: vikas891@gmail.com
   links:
-   - mailto:vikas891@gmail.com
+  #- mailto:vikas891@gmail.com
    - https://linkedin.com/in/vikas891
 
 author:
