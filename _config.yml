@@ -39,7 +39,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Vikas Singh
-  email: vikas891@gmail.com
+  # email: vikas891@gmail.com
   links:
   #- mailto:vikas891@gmail.com
    - https://linkedin.com/in/vikas891
