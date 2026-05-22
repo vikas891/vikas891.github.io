@@ -109,9 +109,6 @@ Even if an attacker uses a custom script and avoids `ntdsutil` or `vssadmin` (av
 
 Here is what it looks like when processed with `EvtxCmd` using my custom maps:
 
-![EvtxCmd Output](/assets/img/posts/ntds-evtxcmd.jpg)
-*EvtxCmd output showing EID 4, 9, and 10 sequence*
-
 1. **EID 9: NTFS Volume Bitmap Scan:**The initialization phase where the driver begins interacting with the volume.
 
 2. **EID 10: NTFS Volume Cached Runs Statistics:**The analysis phase where the volume structure is processed.
@@ -145,11 +142,6 @@ While NTFS logs show *when* the shadow copy was accessed, the **Application logs
    - The snapshot-based NTDS database is detached.  
    - This typically marks the end of the extraction workflow.
 
-![EvtxCmd Output](/assets/img/posts/ntds-evtxcmd-2.jpg)
-*EvtxCmd output showing EID 216, 326, 325 and 327 sequence*
-
----
-
 ### Why This Matters
 
 Individually, these events may not appear suspicious. However, when correlated:
@@ -166,9 +158,6 @@ They collectively form a **high-confidence timeline of NTDS.DIT extraction activ
 In forensics, there are usually no single points of truth. We look for "temporal proximity" by corroborating the same story across multiple artifacts.
 
 If I see those NTFS events at `05:34:00 AM`, and I look at an MFT export and see a new file created at `05:35:45 AM`, I've likely found my exfiltration point.
-
-![MFT Export](/assets/img/posts/ntds-mft.jpg)
-*MFT export showing file creation timestamp aligned with VSS mount events*
 
 An attacker might rename the `NTDS.DIT` to `totally_normal_stuff.log`, but they usually forget that the Created Timestamp on that new file will align perfectly with our NTFS mount events. Looking around the time of these VSS/NTFS events, we usually get lucky.
 
