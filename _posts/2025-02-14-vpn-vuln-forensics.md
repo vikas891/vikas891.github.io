@@ -83,11 +83,11 @@ This research is based off of [Technical Tip: SSL VPN event logs when successful
 ---
 ## 3. SonicWall SSL-VPN
 
-### 3.1 Vulnerability & Exploitation Overview
+### 3.1 Vulnerability and Exploitation Overview
 
 SonicWall SSL-VPN devices have faced credential brute force, zero-day exploits, and session hijacking attempts. Threat actors may use harvested credentials for persistence.
 
-### 3.2 Forensic Analysis & Log Investigation
+### 3.2 Forensic Analysis and Log Investigation
 
 #### How Customers Export VPN Logs
 
@@ -215,11 +215,11 @@ CommonSecurityLog
 ---
 ## 4. Cisco ASA / AnyConnect VPN
 
-### 4.1 Vulnerability & Exploitation Overview
+### 4.1 Vulnerability and Exploitation Overview
 
 Cisco ASA devices using AnyConnect VPN are vulnerable to misconfigurations, credential stuffing, and specific CVEs such as CVE-2020-3452. Threat actors may bypass MFA or leverage stolen session cookies.
 
-### 4.2 Forensic Analysis & Log Investigation
+### 4.2 Forensic Analysis and Log Investigation
 
 #### How Cisco Customers Export or Share VPN Logs
 
